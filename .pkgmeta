@@ -1,0 +1,4 @@
+package-as: HandyNotes_LegionRaresTreasures
+
+ignore:
+  - README.md
