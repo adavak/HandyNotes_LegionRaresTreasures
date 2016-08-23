@@ -478,9 +478,9 @@ nodes["MardumtheShatteredAbyss"] = {
 	[74285453]={ "39977", "小宝箱", "", "洞穴入口在 70.7 / 54.0", "default", "treasure_dh", "129210"},
 	[69704240]={ "39976", "小宝箱", "", "", "default", "treasure_dh", "129210"},
 	
-	[68852759]={ "40234", "General Volroth", "", "", "skull_grey", "rare_dh", "128947"},
-	[81034124]={ "40233", "Overseer Brutarg", "", "", "skull_grey", "rare_dh", "133580"},
-	[74475731]={ "40232", "King Voras", "", "", "skull_grey", "rare_dh", "128944"},
+	[68852759]={ "40234", "沃罗斯将军", "", "", "skull_grey", "rare_dh", "128947"},
+	[81034124]={ "40233", "工头布鲁塔格", "", "", "skull_grey", "rare_dh", "133580"},
+	[74475731]={ "40232", "蛛王沃拉斯", "", "", "skull_grey", "rare_dh", "128944"},
 }
 
 nodes["CrypticHollow"] = {
@@ -503,8 +503,8 @@ nodes["VaultOfTheWardensDH"] = {
 	[24421005]={ "40915", "小宝箱", "", "第三层", "default", "treasure_dh", "129210"},
 	[23268157]={ "40916", "小宝箱", "", "第三层", "default", "treasure_dh", "129210"},
 	
-	[68743628]={ "40301", "Wrath-Lord Lekos", "", "第一层", "skull_grey", "rare_dh", "128958"},
-	[49543284]={ "40251", "Kethrazor", "", "第一层", "skull_grey", "rare_dh", "128945"},
+	[68743628]={ "40301", "愤怒领主勒考斯", "", "第一层", "skull_grey", "rare_dh", "128958"},
+	[49543284]={ "40251", "科斯拉佐", "", "第一层", "skull_grey", "rare_dh", "128945"},
 }
 
 nodes["StormDrakeDen"] = {
