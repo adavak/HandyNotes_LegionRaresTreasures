@@ -382,7 +382,7 @@ nodes["Suramar"] = {
 	[61663958]={ "43993", "赫萨·格里姆多迪", "急速/精通锁甲脚部", "", "skull_grey", "rare_sur", "121737"},
 	[68175896]={ "41135", "科拉卡", "暴击/精通皮甲胸部", "洞穴入口在 69.95 / 56.98", "skull_grey", "rare_sur", "139952"},
 	[66656713]={ "43968", "钳胫", "玩具", "", "skull_grey", "rare_sur", "140314"},
-	[40963282]={ "43358", "米奥妮克丝", "", "", "skull_grey", "rare_sur", "1220"},
+	[40963282]={ "43358", "米奥妮克丝", "暴击/急速皮甲手套", "", "skull_grey", "rare_sur", "121739"},
 	[33725123]={ "43954", "阿纳克斯", "宠物", "", "skull_grey", "rare_sur","140934"},
 	[26104077]={ "42831", "沙兰", "急速/精通布甲护腕", "", "skull_grey", "rare_sur","139926"},
 	[24574740]={ "43449", "邪恶的欧瑞斯", "神器能量", "", "skull_grey", "rare_sur","140388"},
@@ -391,7 +391,7 @@ nodes["Suramar"] = {
 	[38042278]={ "43369", "攻城大师艾丁", "远古魔力", "", "skull_grey", "rare_sur", "140406"},
 	[53193021]={ "40897", "加弗鲁格", "暴击/精通锁甲肩部", "", "skull_grey", "rare_sur", "121755"},
 	[42175641]={ "43580", "药剂师法德伦", "暴击/精通布甲肩部", "", "skull_grey", "rare_sur", "121754"},
-	[48075637]={ "40905", "斯塔瑟玛中尉", "职业大厅资源", "", "skull_grey", "rare_sur", "1220"},
+	[48075637]={ "40905", "斯塔瑟玛中尉", "暴击/精通板甲脚部", "", "skull_grey", "rare_sur", "121735"},
 	--[67065161]={ "99999", "Broodmother Shu'malis", "职业大厅资源", "标记为稀有但是看起来还没有任务 ID", "skull_grey", "rare_sur", "1220"},
 	[27776547]={ "43992", "Gorgroth", "暴击/急速板甲腿部", "点击传送点", "skull_grey", "rare_sur", "121747"},
 	[62506369]={ "43793", "米娅苏", "急速饰品", "", "skull_grey", "rare_sur", "121810"},
@@ -401,7 +401,7 @@ nodes["Suramar"] = {
 	[24052542]={ "43484", "劳伦", "急速/精通皮甲腰带", "", "skull_grey", "rare_sur", "121759"},
 	[42058005]={ "43348", "魔导师法蒂斯", "远古魔力", "", "skull_grey", "rare_sur", "140405"},
 	[29395330]={ "44676", "Llorian", "神器能量", "洞穴入口在 29.29 / 50.71", "skull_grey", "rare_sur", "138839"},
-	[35236723]={ "44675", "Lady Rivantas", "职业大厅资源", "", "skull_grey", "rare_sur", "1220"},
+	[35236723]={ "44675", "Lady Rivantas", "全能/精通布甲手套", "", "skull_grey", "rare_sur", "141866"},
 }
 
 nodes["Darkpens"] = {
@@ -523,12 +523,12 @@ nodes["FalanaarTunnels"] = {
 
 
 if (PlayerFaction == "Alliance") then
-  nodes["Stormheim"][44202296]={ "38630", "Horde Kill Squad", "职业大厅资源", "只限联盟", "skull_grey", "rare_sth", "1220"}
+  nodes["Stormheim"][44202296]={ "38630", "Horde Kill Squad", "暴击/全能板甲手套", "只限联盟", "skull_grey", "rare_sth", "129266"}
   nodes["Stormheim"][42015767]={ "38625", "Hook and Sinker", "暴击/精通布甲腰带", "", "skull_grey", "rare_sth", "129100"}
 end
 
 if (PlayerFaction == "Horde") then
-  nodes["Stormheim"][44202296]={ "38627", "Worgen Stalkers", "职业大厅资源", "只限部落", "skull_grey", "rare_sth", "1220"}
+  nodes["Stormheim"][44202296]={ "38627", "Worgen Stalkers", "暴击/精通板甲手套", "只限部落", "skull_grey", "rare_sth", "129264"}
   nodes["Stormheim"][47205710]={ "38712", "Houndmaster Ely", "急速/精通布甲腿部", "", "skull_grey", "rare_sth", "129037"}
 end
 
