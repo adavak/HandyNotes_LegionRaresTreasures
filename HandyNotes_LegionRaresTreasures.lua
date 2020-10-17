@@ -1,3 +1,14 @@
+local GetCurrencyInfo = GetCurrencyInfo;
+if GetCurrencyInfo == nil and C_CurrencyInfo.GetCurrencyInfo ~= nil then
+    local __GetCurrencyInfo = C_CurrencyInfo.GetCurrencyInfo;
+    GetCurrencyInfo = function(index)
+        if index ~= nil then
+            local info = __GetCurrencyInfo(index);
+            return info.name, info.quantity, info.iconFileID, info.quantityEarnedThisWeek, info.maxWeeklyQuantity, info.maxQuantity, info.discovered, info.quality;
+        end
+	end
+end
+local WorldMapTooltip = WorldMapTooltip or _G.GameTooltip
 LegionRaresTreasures = LibStub("AceAddon-3.0"):NewAddon("LegionRaresTreasures", "AceBucket-3.0", "AceConsole-3.0", "AceEvent-3.0", "AceTimer-3.0")
 local HandyNotes = LibStub("AceAddon-3.0"):GetAddon("HandyNotes", true)
 
@@ -70,12 +81,12 @@ nodes["Azsuna"] = {
 	[41393075]={ "42292", "宝箱", "神器能量", "", "default", "treasure_azs", "138783"},
 	[34583556]={ "44102", "小宝箱", "神器能量", "", "default", "treasure_azs", "138783"},
 	[43392242]={ "42297", "闪闪发光的宝箱", "神器能量", "上山路径起点在 39.14 / 32.84", "default", "treasure_azs", "138783"},
-	[52842059]={ "42339", "宝箱", "神器能量", "洞穴入口在 53.95 / 22.43 | The bears will keep sleeping unless you disturb them", "default", "treasure_azs", "138783"},
+	[52842059]={ "42339", "宝箱", "神器能量", "洞穴入口在 53.95 / 22.43 | 熊会一直睡觉，除非你打扰它", "default", "treasure_azs", "138783"},
 
-	[52382304]={ "38268", "Cailyn Paledoom", "急速/精通皮甲头盔", "", "skull_grey", "rare_azs", "129063"},
+	[52382304]={ "38268", "塞林·灰月", "急速/精通皮甲头盔", "", "skull_grey", "rare_azs", "129063"},
 	[43172813]={ "38352", "马瑞斯与特德对末日领主", "智力/暴击饰品", "", "skull_grey", "rare_azs", "129056"},
 	[34963391]={ "42505", "奥术师沙尔曼", "暴击/急速布甲护腕", "池子周围", "skull_grey", "rare_azs", "141868"},
-	[30774799]={ "42286", "Houndmaster Stroxis", "暴击/急速锁甲腰带", "", "skull_grey", "rare_azs", "141873"},
+	[30774799]={ "42286", "驯犬者斯托克西斯", "暴击/急速锁甲腰带", "", "skull_grey", "rare_azs", "141873"},
 	[29275366]={ "42417", "拜尔班", "暴击/急速皮甲脚部", "", "skull_grey", "rare_azs", "129079"},
 	[37374318]={ "42280", "沃萨克斯", "暴击/精通锁甲胸部", "", "skull_grey", "rare_azs", "141875"},
 	[32292972]={ "38238", "滩沙", "急速/全能板甲肩部", "在海滩巡逻", "skull_grey", "rare_azs", "129067"},
@@ -306,7 +317,7 @@ nodes["Stormheim"] = {
 	[47174983]={ "38774", "迷路的双头怪", "力量饰品", "", "skull_grey", "rare_sth","129163"},
 	[46828406]={ "38425", "法斯尼尔", "暴击戒指", "", "skull_grey", "rare_sth", "129206"},
 	[64805176]={ "38847", "掠夺者乌格夫", "急速/精通布甲护腕", "", "skull_grey", "rare_sth","129219"},
-	[73906060]={ "43343", "Dread-Rider Cortis", "急速/精通锁甲腿部", "", "skull_grey", "rare_sth","130134"},
+	[73906060]={ "43343", "亡灵骑兵柯提斯", "急速/精通锁甲腿部", "", "skull_grey", "rare_sth","130134"},
 	[62036049]={ "39120", "“大锤”伊赛尔", "暴击/急速锁甲头盔", "", "skull_grey", "rare_sth","129133"},
 	[59826807]={ "39031", "白色哨兵", "精通饰品智力专属", "", "skull_grey", "rare_sth","132895"},
 	[41476702]={ "38333", "葛利玛·铁拳", "暴击/精通板甲腰带", "", "skull_grey", "rare_sth","129291"},
@@ -398,7 +409,7 @@ nodes["Suramar"] = {
 	[53193021]={ "40897", "加弗鲁格", "暴击/精通锁甲肩部", "", "skull_grey", "rare_sur", "121755"},
 	[42175641]={ "43580", "药剂师法德伦", "暴击/精通布甲肩部", "", "skull_grey", "rare_sur", "121754"},
 	[48075637]={ "40905", "斯塔瑟玛中尉", "暴击/精通板甲脚部", "", "skull_grey", "rare_sur", "121735"},
-	--[67065161]={ "99999", "Broodmother Shu'malis", "职业大厅资源", "标记为稀有但是看起来还没有任务 ID", "skull_grey", "rare_sur", "1220"},
+	--[67065161]={ "99999", "巢母舒玛利斯", "职业大厅资源", "标记为稀有但是看起来还没有任务 ID", "skull_grey", "rare_sur", "1220"},
 	[27776547]={ "43992", "高格罗斯", "暴击/急速板甲腿部", "点击传送门钥匙", "skull_grey", "rare_sur", "121747"},
 	[62506369]={ "43793", "米娅苏", "急速饰品", "", "skull_grey", "rare_sur", "121810"},
 	[65575914]={ "43481", "奥术师莉兰德", "远古魔力", "", "skull_grey", "rare_sur", "140403"},
@@ -496,7 +507,7 @@ nodes["CrypticHollow"] = {
 
 nodes["SoulEngine"] = {
 	[50304964]={ "40772", "小宝箱", "", "", "default", "treasure_dh", "129210"},
-	[51235740]={ "40231", "Count Nefarious", "", "", "skull_grey", "rare_dh", "128948"},
+	[51235740]={ "40231", "邪恶伯爵", "", "", "skull_grey", "rare_dh", "128948"},
 }
 
 nodes["VaultOfTheWardensDH"] = {
@@ -950,7 +961,7 @@ end
 
 function LegionRaresTreasures:QuestCheck()
     do
-		if (IsQuestFlaggedCompleted(41246)) then
+		if (C_QuestLog.IsQuestFlaggedCompleted(41246)) then
 			nodes["Highmountain"][52556638]={ "42453", "宝箱", "神器能量", "只有在至高岭完成至高岭营地任务线才可到达。", "default", "treasure_hmn", "138783"}
 		end
     end
@@ -1009,7 +1020,7 @@ function LegionRaresTreasures:HasBeenLooted(value)
     if (self.db.profile.alwaysshowtreasures and (string.find(value[6], "treasure") ~= nil)) then return false end
     if (self.db.profile.alwaysshowrares and (string.find(value[6], "treasure") == nil)) then return false end
     if (LegionRaresTreasures.db.char[value[1]] and self.db.profile.save) then return true end
-    if (IsQuestFlaggedCompleted(value[1])) then
+    if (C_QuestLog.IsQuestFlaggedCompleted(value[1])) then
         return true
     end
 
